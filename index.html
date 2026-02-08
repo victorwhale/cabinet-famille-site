@@ -1,0 +1,2134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabinet Delacroix - Droit de la Famille | Avocat Bordeaux</title>
+  <meta name="description" content="Cabinet Delacroix, avocat en droit de la famille a Bordeaux. Divorce, garde d'enfants, pension alimentaire. Accompagnement humain et rigoureux.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white-warm: #FDFBF7;
+      --cream: #F5F0E8;
+      --cream-dark: #EDE6D8;
+      --navy: #1A1A2E;
+      --navy-light: #2D2D44;
+      --blue-soft: #4A7BA7;
+      --blue-light: #6B9DC2;
+      --blue-pale: #E8F0F7;
+      --lavender: #7C6FA0;
+      --lavender-light: #9B8FBF;
+      --lavender-pale: #F0ECF5;
+      --text-primary: #2C2C3E;
+      --text-secondary: #5A5A6E;
+      --text-light: #8A8A9A;
+      --gold-subtle: #C4A96A;
+      --gold-light: #F0E6D0;
+      --border-light: rgba(26, 26, 46, 0.08);
+      --shadow-soft: 0 2px 20px rgba(26, 26, 46, 0.06);
+      --shadow-medium: 0 4px 30px rgba(26, 26, 46, 0.1);
+      --shadow-hover: 0 8px 40px rgba(26, 26, 46, 0.14);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-primary);
+      background-color: var(--white-warm);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+    h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
+
+    p {
+      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+      color: var(--text-secondary);
+    }
+
+    a {
+      color: var(--blue-soft);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+
+    a:hover { color: var(--lavender); }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue-soft);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      margin-bottom: 20px;
+      color: var(--navy);
+    }
+
+    .section-subtitle {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.8;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    /* ===== REVEAL ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 24px;
+      transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+    }
+
+    .nav.scrolled {
+      background: rgba(253, 251, 247, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 1px 20px rgba(26, 26, 46, 0.06);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      transition: height var(--transition);
+    }
+
+    .nav.scrolled .nav-inner {
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--navy), var(--blue-soft));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .nav-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .nav-logo-text span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--blue-soft);
+      transition: width var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--navy);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      background: var(--navy);
+      color: white !important;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 0.85rem !important;
+      font-weight: 500 !important;
+      transition: background var(--transition), transform var(--transition) !important;
+    }
+
+    .nav-cta::after { display: none !important; }
+
+    .nav-cta:hover {
+      background: var(--navy-light) !important;
+      color: white !important;
+      transform: translateY(-1px);
+    }
+
+    .nav-mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav-mobile-toggle span {
+      width: 22px;
+      height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: linear-gradient(165deg, var(--white-warm) 0%, var(--cream) 50%, var(--blue-pale) 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(74, 123, 167, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -150px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(124, 111, 160, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-text {
+      max-width: 560px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(74, 123, 167, 0.08);
+      border: 1px solid rgba(74, 123, 167, 0.15);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--blue-soft);
+      margin-bottom: 28px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--blue-soft);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      color: var(--navy);
+      margin-bottom: 24px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--blue-soft);
+    }
+
+    .hero-description {
+      font-size: clamp(1rem, 1.8vw, 1.1rem);
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 40px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--navy);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background: var(--navy-light);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(26, 26, 46, 0.2);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--navy);
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1.5px solid var(--border-light);
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--blue-soft);
+      color: var(--blue-soft);
+      transform: translateY(-2px);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card {
+      width: 100%;
+      max-width: 440px;
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      box-shadow: var(--shadow-medium);
+      position: relative;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 40px;
+      right: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue-soft), var(--lavender));
+      border-radius: 0 0 4px 4px;
+    }
+
+    .hero-card-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      position: relative;
+      padding-left: 20px;
+      border-left: 2px solid var(--blue-soft);
+    }
+
+    .hero-card-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-card-avatar {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--blue-pale), var(--lavender-pale));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .hero-card-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+
+    .hero-card-role {
+      font-size: 0.78rem;
+      color: var(--text-light);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .hero-stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    /* ===== REASSURANCE BAR ===== */
+    .reassurance {
+      background: var(--navy);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reassurance::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(74, 123, 167, 0.1) 0%, transparent 50%, rgba(124, 111, 160, 0.08) 100%);
+    }
+
+    .reassurance-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .reassurance-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .reassurance-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .reassurance-text {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .reassurance-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* ===== EXPERTISES ===== */
+    .expertises {
+      background: linear-gradient(180deg, var(--white-warm) 0%, var(--cream) 100%);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .expertise-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      transition: all var(--transition);
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expertise-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue-soft), var(--lavender));
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(74, 123, 167, 0.1);
+    }
+
+    .expertise-card:hover::before {
+      opacity: 1;
+    }
+
+    .expertise-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .expertise-icon.blue { background: var(--blue-pale); }
+    .expertise-icon.lavender { background: var(--lavender-pale); }
+    .expertise-icon.gold { background: var(--gold-light); }
+
+    .expertise-card h3 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 1.15rem;
+    }
+
+    .expertise-card p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    /* ===== APPROACH ===== */
+    .approach {
+      background: linear-gradient(180deg, var(--cream) 0%, var(--white-warm) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .approach-text .section-subtitle {
+      margin-bottom: 32px;
+    }
+
+    .approach-features {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .approach-feature {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .approach-feature-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--blue-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .approach-feature h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .approach-feature p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .approach-visual {
+      position: relative;
+    }
+
+    .approach-card-main {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-medium);
+      position: relative;
+    }
+
+    .approach-card-main::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: -8px;
+      width: 4px;
+      height: 60px;
+      background: linear-gradient(180deg, var(--blue-soft), var(--lavender));
+      border-radius: 4px;
+    }
+
+    .approach-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .approach-author-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .approach-author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--blue-soft));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .approach-author-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--navy);
+    }
+
+    .approach-author-title {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .approach-floating-card {
+      position: absolute;
+      bottom: -24px;
+      right: -16px;
+      background: var(--navy);
+      color: white;
+      padding: 20px 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .approach-floating-stat {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .approach-floating-label {
+      font-size: 0.78rem;
+      opacity: 0.7;
+      margin-top: 2px;
+    }
+
+    /* ===== CHIFFRES ===== */
+    .chiffres {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .chiffres::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(74, 123, 167, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .chiffres::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -50px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(124, 111, 160, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .chiffres .section-label {
+      color: var(--blue-light);
+    }
+
+    .chiffres .section-title {
+      color: white;
+    }
+
+    .chiffres .section-subtitle {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .chiffres-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .chiffre-card {
+      text-align: center;
+      padding: 48px 32px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all var(--transition);
+    }
+
+    .chiffre-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .chiffre-number {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .chiffre-number span {
+      color: var(--blue-light);
+    }
+
+    .chiffre-label {
+      font-size: 1rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 8px;
+    }
+
+    .chiffre-description {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.45);
+      line-height: 1.6;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .temoignages {
+      background: linear-gradient(180deg, var(--white-warm) 0%, var(--cream) 100%);
+    }
+
+    .temoignages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .temoignage-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      box-shadow: var(--shadow-soft);
+      transition: all var(--transition);
+      position: relative;
+    }
+
+    .temoignage-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .temoignage-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 20px;
+    }
+
+    .temoignage-star {
+      color: var(--gold-subtle);
+      font-size: 0.9rem;
+    }
+
+    .temoignage-text {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    .temoignage-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .temoignage-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+    }
+
+    .temoignage-avatar.blue { background: linear-gradient(135deg, var(--blue-soft), var(--blue-light)); }
+    .temoignage-avatar.lavender { background: linear-gradient(135deg, var(--lavender), var(--lavender-light)); }
+    .temoignage-avatar.navy { background: linear-gradient(135deg, var(--navy), var(--navy-light)); }
+
+    .temoignage-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+
+    .temoignage-location {
+      font-size: 0.78rem;
+      color: var(--text-light);
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      background: linear-gradient(180deg, var(--cream) 0%, var(--white-warm) 100%);
+    }
+
+    .faq-grid {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: rgba(74, 123, 167, 0.15);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      gap: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .faq-question-text {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+    }
+
+    .faq-toggle {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--blue-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all var(--transition);
+    }
+
+    .faq-toggle svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--blue-soft);
+      transition: transform var(--transition);
+    }
+
+    .faq-item.open .faq-toggle {
+      background: var(--blue-soft);
+    }
+
+    .faq-item.open .faq-toggle svg {
+      stroke: white;
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-answer-inner {
+      padding: 0 28px 24px;
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      line-height: 1.8;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      background: linear-gradient(180deg, var(--white-warm) 0%, var(--cream) 100%);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .contact-info > p {
+      margin-bottom: 36px;
+      line-height: 1.8;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .contact-detail-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--blue-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-detail-label {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .contact-detail-value {
+      font-size: 0.95rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .contact-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--lavender-pale);
+      padding: 16px 20px;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      color: var(--lavender);
+      font-weight: 500;
+    }
+
+    .contact-form-wrapper {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      box-shadow: var(--shadow-medium);
+    }
+
+    .contact-form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .contact-form-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border-light);
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      background: var(--white-warm);
+      transition: all var(--transition);
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue-soft);
+      box-shadow: 0 0 0 3px rgba(74, 123, 167, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--navy);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      background: var(--navy-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(26, 26, 46, 0.2);
+    }
+
+    .form-privacy {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      margin-top: 12px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 64px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand-description {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 16px;
+      max-width: 300px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-logo-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .footer-logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: white;
+      font-weight: 600;
+    }
+
+    .footer h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.6);
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .footer-bottom a:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .approach-visual {
+        order: -1;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 72px 0; }
+
+      .nav-links { display: none; }
+
+      .nav-mobile-toggle {
+        display: flex;
+      }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white-warm);
+        padding: 24px;
+        gap: 16px;
+        box-shadow: var(--shadow-medium);
+        border-radius: 0 0 var(--radius) var(--radius);
+      }
+
+      .reassurance-inner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .reassurance-item {
+        justify-content: center;
+      }
+
+      .reassurance-divider {
+        width: 60px;
+        height: 1px;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .chiffres-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .temoignages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        padding: 100px 24px 60px;
+      }
+
+      .contact-form-wrapper {
+        padding: 28px;
+      }
+
+      .approach-floating-card {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 16px;
+        display: inline-block;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .footer-legal-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">D</div>
+        <div class="nav-logo-text">
+          Cabinet Delacroix
+          <span>Droit de la Famille</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#expertises">Expertises</a></li>
+        <li><a href="#approche">Notre approche</a></li>
+        <li><a href="#temoignages">Avis clients</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact" class="nav-cta">Prendre rendez-vous</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge reveal">Cabinet d'avocats en droit de la famille - Bordeaux</div>
+        <h1 class="reveal reveal-delay-1">
+          Dans les moments difficiles, vous meritez un accompagnement <em>humain</em> et rigoureux.
+        </h1>
+        <p class="hero-description reveal reveal-delay-2">
+          Divorce, garde d'enfants, pension alimentaire... Chaque situation familiale est unique.
+          Nous vous accompagnons avec empathie et determination pour proteger vos droits
+          et ceux de vos enfants.
+        </p>
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#contact" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Premier rendez-vous gratuit
+          </a>
+          <a href="#expertises" class="btn-secondary">
+            Decouvrir nos expertises
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="hero-card">
+          <div class="hero-card-quote">
+            Maitre Delacroix a su m'ecouter et me guider avec une grande humanite dans cette periode si difficile de ma vie.
+          </div>
+          <div class="hero-card-author">
+            <div class="hero-card-avatar">&#128149;</div>
+            <div>
+              <div class="hero-card-name">Sophie M.</div>
+              <div class="hero-card-role">Procedure de divorce - 2024</div>
+            </div>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-number">600<span style="color: var(--blue-soft);">+</span></div>
+              <div class="hero-stat-label">Familles accompagnees</div>
+            </div>
+            <div>
+              <div class="hero-stat-number">70<span style="color: var(--blue-soft);">%</span></div>
+              <div class="hero-stat-label">Resolutions amiables</div>
+            </div>
+            <div>
+              <div class="hero-stat-number">12</div>
+              <div class="hero-stat-label">Ans d'experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REASSURANCE BAR ===== -->
+  <section class="reassurance">
+    <div class="reassurance-inner">
+      <div class="reassurance-item">
+        <div class="reassurance-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <span class="reassurance-text">Confidentialite absolue</span>
+      </div>
+      <div class="reassurance-divider"></div>
+      <div class="reassurance-item">
+        <div class="reassurance-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <span class="reassurance-text">Ecoute bienveillante</span>
+      </div>
+      <div class="reassurance-divider"></div>
+      <div class="reassurance-item">
+        <div class="reassurance-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <span class="reassurance-text">Solutions sur-mesure</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERTISES ===== -->
+  <section class="section expertises" id="expertises">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Nos domaines d'intervention</span>
+        <h2 class="section-title reveal reveal-delay-1">Une expertise complete en droit de la famille</h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Chaque situation familiale est unique. Nous mettons notre savoir-faire juridique
+          au service de solutions adaptees a votre realite.
+        </p>
+      </div>
+      <div class="expertise-grid">
+        <div class="expertise-card reveal">
+          <div class="expertise-icon blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <h3>Divorce</h3>
+          <p>Divorce amiable, contentieux ou par consentement mutuel. Nous vous guidons vers la procedure la plus adaptee a votre situation, en privilegiant toujours le dialogue.</p>
+        </div>
+        <div class="expertise-card reveal reveal-delay-1">
+          <div class="expertise-icon lavender">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C6FA0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Garde d'enfants et droit de visite</h3>
+          <p>Protection de l'interet superieur de l'enfant, amenagement de la residence alternee, droit de visite et d'hebergement. L'enfant reste notre priorite absolue.</p>
+        </div>
+        <div class="expertise-card reveal reveal-delay-2">
+          <div class="expertise-icon gold">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4A96A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Pension alimentaire</h3>
+          <p>Fixation, revision ou recouvrement de la pension alimentaire et de la prestation compensatoire. Nous veillons a l'equilibre financier de chaque famille.</p>
+        </div>
+        <div class="expertise-card reveal reveal-delay-1">
+          <div class="expertise-icon lavender">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C6FA0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Adoption et filiation</h3>
+          <p>Accompagnement dans les demarches d'adoption nationale et internationale, reconnaissance de filiation, contestation de paternite. Nous construisons des liens familiaux durables.</p>
+        </div>
+        <div class="expertise-card reveal reveal-delay-2">
+          <div class="expertise-icon blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Violences conjugales</h3>
+          <p>Obtention d'ordonnances de protection en urgence, accompagnement des victimes de violences intra-familiales. Votre securite et celle de vos enfants est notre priorite immediate.</p>
+        </div>
+        <div class="expertise-card reveal reveal-delay-3">
+          <div class="expertise-icon gold">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4A96A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Liquidation du regime matrimonial</h3>
+          <p>Partage equitable du patrimoine commun, evaluation des biens, recompenses et creances entre epoux. Une approche rigoureuse pour un partage juste.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOTRE APPROCHE ===== -->
+  <section class="section approach" id="approche">
+    <div class="container">
+      <div class="approach-grid">
+        <div class="approach-text">
+          <span class="section-label reveal">Notre philosophie</span>
+          <h2 class="section-title reveal reveal-delay-1">Une approche resolument humaine du droit</h2>
+          <p class="section-subtitle reveal reveal-delay-2">
+            Nous croyons que derriere chaque dossier, il y a une famille, des emotions, et des enfants
+            dont l'avenir se dessine. C'est pourquoi nous ecoutons d'abord, avant de conseiller.
+          </p>
+          <div class="approach-features">
+            <div class="approach-feature reveal reveal-delay-2">
+              <div class="approach-feature-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div>
+                <h4>L'ecoute avant tout</h4>
+                <p>Chaque premier rendez-vous est un temps d'ecoute. Nous prenons le temps de comprendre votre situation dans sa globalite avant toute demarche.</p>
+              </div>
+            </div>
+            <div class="approach-feature reveal reveal-delay-3">
+              <div class="approach-feature-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h4>La mediation comme premier reflexe</h4>
+                <p>Lorsque c'est possible, nous privilegions les solutions amiables et la mediation familiale. Moins couteuses, plus rapides, et surtout plus douces pour les enfants.</p>
+              </div>
+            </div>
+            <div class="approach-feature reveal reveal-delay-4">
+              <div class="approach-feature-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4>Une defense feroce quand il le faut</h4>
+                <p>Si la voie amiable echoue, nous deployons toute notre expertise contentieuse pour defendre vos droits avec rigueur et determination devant les tribunaux.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="approach-visual reveal reveal-delay-2">
+          <div class="approach-card-main">
+            <div class="approach-quote">
+              Chaque famille a sa propre histoire. Notre role n'est pas de juger, mais de vous accompagner vers la meilleure issue possible, avec humanite et rigueur.
+            </div>
+            <div class="approach-author-info">
+              <div class="approach-author-avatar">ED</div>
+              <div>
+                <div class="approach-author-name">Me Emilie Delacroix</div>
+                <div class="approach-author-title">Fondatrice du cabinet - Barreau de Bordeaux</div>
+              </div>
+            </div>
+          </div>
+          <div class="approach-floating-card">
+            <div class="approach-floating-stat">70%</div>
+            <div class="approach-floating-label">de resolutions amiables</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHIFFRES CLES ===== -->
+  <section class="section chiffres" id="chiffres">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">En chiffres</span>
+        <h2 class="section-title reveal reveal-delay-1">La confiance de centaines de familles bordelaises</h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Depuis 2013, nous accompagnons les familles de la region bordelaise dans leurs transitions les plus delicates.
+        </p>
+      </div>
+      <div class="chiffres-grid">
+        <div class="chiffre-card reveal">
+          <div class="chiffre-number">600<span>+</span></div>
+          <div class="chiffre-label">Familles accompagnees</div>
+          <div class="chiffre-description">Des histoires uniques, des solutions personnalisees pour chaque famille que nous avons eu l'honneur d'accompagner.</div>
+        </div>
+        <div class="chiffre-card reveal reveal-delay-1">
+          <div class="chiffre-number">12 <span>ans</span></div>
+          <div class="chiffre-label">D'experience dediee</div>
+          <div class="chiffre-description">Plus d'une decennie consacree exclusivement au droit de la famille, pour une expertise toujours plus fine.</div>
+        </div>
+        <div class="chiffre-card reveal reveal-delay-2">
+          <div class="chiffre-number">70<span>%</span></div>
+          <div class="chiffre-label">Resolutions amiables</div>
+          <div class="chiffre-description">Notre approche privilegiant le dialogue permet de resoudre la majorite des situations sans passer devant le juge.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEMOIGNAGES ===== -->
+  <section class="section temoignages" id="temoignages">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Ils nous ont fait confiance</span>
+        <h2 class="section-title reveal reveal-delay-1">Paroles de familles accompagnees</h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Derriere chaque temoignage, une famille qui a retrouve un equilibre.
+          Leur confiance est notre plus grande fierte.
+        </p>
+      </div>
+      <div class="temoignages-grid">
+        <div class="temoignage-card reveal">
+          <div class="temoignage-stars">
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+          </div>
+          <p class="temoignage-text">
+            &laquo; Apres des mois d'angoisse, Maitre Delacroix a su me rassurer des le premier rendez-vous. Elle a gere mon divorce avec une humanite rare, tout en protegeant les interets de mes deux enfants. Aujourd'hui, la garde alternee se passe sereinement. Je lui serai eternellement reconnaissante. &raquo;
+          </p>
+          <div class="temoignage-author">
+            <div class="temoignage-avatar blue">S</div>
+            <div>
+              <div class="temoignage-name">Sophie</div>
+              <div class="temoignage-location">Bordeaux - Divorce et garde d'enfants</div>
+            </div>
+          </div>
+        </div>
+        <div class="temoignage-card reveal reveal-delay-1">
+          <div class="temoignage-stars">
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+          </div>
+          <p class="temoignage-text">
+            &laquo; Je ne pensais pas qu'un divorce pouvait se passer aussi bien. Grace a la mediation proposee par le cabinet, mon ex-femme et moi avons pu trouver un accord en trois mois. Nos enfants n'ont pas eu a souffrir d'un conflit prolonge. Merci pour cette approche humaine. &raquo;
+          </p>
+          <div class="temoignage-author">
+            <div class="temoignage-avatar lavender">M</div>
+            <div>
+              <div class="temoignage-name">Marc</div>
+              <div class="temoignage-location">Pessac - Divorce par consentement mutuel</div>
+            </div>
+          </div>
+        </div>
+        <div class="temoignage-card reveal reveal-delay-2">
+          <div class="temoignage-stars">
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+            <span class="temoignage-star">&#9733;</span>
+          </div>
+          <p class="temoignage-text">
+            &laquo; Dans une situation de violence conjugale, le cabinet a agi avec une rapidite et une efficacite remarquables pour obtenir une ordonnance de protection. Je me suis sentie en securite et soutenue a chaque etape. Ce cabinet sauve des vies. &raquo;
+          </p>
+          <div class="temoignage-author">
+            <div class="temoignage-avatar navy">L</div>
+            <div>
+              <div class="temoignage-name">Laure</div>
+              <div class="temoignage-location">Bordeaux - Ordonnance de protection</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Questions frequentes</span>
+        <h2 class="section-title reveal reveal-delay-1">Vos questions, nos reponses</h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Nous comprenons que la procedure peut sembler complexe. Voici des reponses claires
+          aux questions les plus frequentes.
+        </p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Quelle est la difference entre un divorce amiable et un divorce contentieux ?</span>
+            <div class="faq-toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Le <strong>divorce par consentement mutuel</strong> (amiable) est une procedure simplifiee ou les deux epoux sont d'accord sur toutes les consequences du divorce : partage des biens, garde des enfants, pension alimentaire. Il est formalise par une convention signee par les deux parties et leurs avocats, puis deposee chez un notaire. C'est la procedure la plus rapide (environ 2 a 3 mois) et la moins couteuse.<br><br>
+              Le <strong>divorce contentieux</strong> intervient lorsque les epoux ne parviennent pas a s'entendre. Il est prononce par le juge aux affaires familiales qui tranche les differends. Cette procedure est plus longue (6 mois a 2 ans selon la complexite) et plus onereuse. Nous privilegions toujours la voie amiable lorsque c'est possible.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Combien de temps dure une procedure de divorce en moyenne ?</span>
+            <div class="faq-toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              La duree varie considerablement selon le type de procedure choisie :<br><br>
+              <strong>Divorce par consentement mutuel :</strong> 2 a 4 mois en moyenne. C'est la procedure la plus rapide car elle ne necessite pas de passage devant le juge.<br><br>
+              <strong>Divorce contentieux :</strong> entre 12 et 24 mois en general, selon la complexite du dossier et l'engorgement du tribunal. Les questions de patrimoine important ou de garde d'enfants conflictuelle peuvent allonger les delais.<br><br>
+              Notre experience nous permet d'accelerer les procedures en preparant des dossiers complets et solides des le depart. Nous vous tenons informe a chaque etape de l'avancement.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Comment sont determines les droits de garde et le droit de visite ?</span>
+            <div class="faq-toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              L'<strong>interet superieur de l'enfant</strong> est le critere central. Le juge aux affaires familiales prend en compte plusieurs facteurs : l'age de l'enfant, ses besoins, la disponibilite de chaque parent, la proximite des ecoles, et surtout le maintien des liens avec les deux parents.<br><br>
+              La <strong>residence alternee</strong> (une semaine sur deux chez chaque parent) est de plus en plus frequente, mais elle n'est pas systematique. Le juge peut egalement fixer une residence principale chez l'un des parents avec un droit de visite et d'hebergement pour l'autre.<br><br>
+              Nous travaillons toujours a obtenir un accord qui preserve le bien-etre de l'enfant et respecte les droits de chaque parent. L'avis de l'enfant peut etre recueilli par le juge s'il est en age de discernement.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Combien coute une procedure de divorce ? Existe-t-il des aides ?</span>
+            <div class="faq-toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Les honoraires varient selon la complexite de votre dossier. Nous pratiquons une <strong>transparence totale</strong> sur les couts des le premier rendez-vous :<br><br>
+              <strong>Divorce par consentement mutuel :</strong> a partir de 1 500 euros HT par epoux, incluant la redaction de la convention et les formalites.<br><br>
+              <strong>Divorce contentieux :</strong> les honoraires sont evalues au cas par cas selon la complexite. Nous proposons un devis detaille apres analyse de votre situation.<br><br>
+              Si vos revenus sont modestes, vous pouvez beneficier de l'<strong>aide juridictionnelle</strong>, qui prend en charge tout ou partie des frais d'avocat. Nous vous accompagnons dans cette demande. Le premier rendez-vous est offert pour evaluer ensemble votre situation.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-label reveal">Nous contacter</span>
+          <h2 class="section-title reveal reveal-delay-1">Parlons de votre situation</h2>
+          <p class="reveal reveal-delay-2">
+            Le premier pas est souvent le plus difficile. Notre premier rendez-vous est un temps
+            d'ecoute confidentiel, sans engagement, pour comprendre votre situation et vous
+            orienter vers la meilleure solution.
+          </p>
+          <div class="contact-details reveal reveal-delay-3">
+            <div class="contact-detail">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-detail-label">Adresse</div>
+                <div class="contact-detail-value">24 Cours de l'Intendance<br>33000 Bordeaux</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact-detail-label">Telephone</div>
+                <div class="contact-detail-value">05 56 48 72 13</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-detail-label">Email</div>
+                <div class="contact-detail-value">contact@cabinet-delacroix.fr</div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-note reveal reveal-delay-4">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C6FA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Premier rendez-vous confidentiel et sans engagement
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal reveal-delay-2">
+          <div class="contact-form-title">Demande de rendez-vous</div>
+          <p class="contact-form-subtitle">Nous vous recontacterons sous 24 heures ouvrees.</p>
+          <form id="contactForm" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prenom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required>
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.fr" required>
+              </div>
+              <div class="form-group">
+                <label for="telephone">Telephone</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="sujet">Sujet de votre demande</label>
+              <select id="sujet" name="sujet">
+                <option value="" disabled selected>Selectionnez un sujet...</option>
+                <option value="divorce">Divorce</option>
+                <option value="garde">Garde d'enfants</option>
+                <option value="pension">Pension alimentaire</option>
+                <option value="adoption">Adoption / Filiation</option>
+                <option value="violence">Violences conjugales</option>
+                <option value="patrimoine">Liquidation du patrimoine</option>
+                <option value="autre">Autre question</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" placeholder="Decrivez brievement votre situation. Toutes les informations transmises sont strictement confidentielles." rows="4"></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Envoyer ma demande de rendez-vous
+            </button>
+            <p class="form-privacy">
+              Vos donnees sont protegees et traitees conformement au RGPD.<br>
+              Elles ne seront jamais partagees avec des tiers.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <div class="footer-logo-icon">D</div>
+            <span class="footer-logo-name">Cabinet Delacroix</span>
+          </div>
+          <p class="footer-brand-description">
+            Cabinet d'avocats dedie au droit de la famille a Bordeaux.
+            Un accompagnement humain et rigoureux pour chaque etape de votre vie familiale.
+          </p>
+        </div>
+        <div>
+          <h4>Expertises</h4>
+          <ul class="footer-links">
+            <li><a href="#expertises">Divorce</a></li>
+            <li><a href="#expertises">Garde d'enfants</a></li>
+            <li><a href="#expertises">Pension alimentaire</a></li>
+            <li><a href="#expertises">Adoption</a></li>
+            <li><a href="#expertises">Violences conjugales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Le cabinet</h4>
+          <ul class="footer-links">
+            <li><a href="#approche">Notre approche</a></li>
+            <li><a href="#temoignages">Avis clients</a></li>
+            <li><a href="#faq">Questions frequentes</a></li>
+            <li><a href="#contact">Prendre rendez-vous</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Informations</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mentions legales</a></li>
+            <li><a href="#">Politique de confidentialite</a></li>
+            <li><a href="#">Barreau de Bordeaux</a></li>
+            <li><a href="#">Acces au droit</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Cabinet Delacroix - Tous droits reserves. Barreau de Bordeaux.</span>
+        <div class="footer-legal-links">
+          <a href="#">Mentions legales</a>
+          <a href="#">Confidentialite</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Scroll reveal animations using IntersectionObserver
+    (function() {
+      const revealElements = document.querySelectorAll('.reveal');
+
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      revealElements.forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+    // Navigation scroll effect
+    (function() {
+      var nav = document.getElementById('nav');
+      var lastScrollY = 0;
+
+      window.addEventListener('scroll', function() {
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollY > 20) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+        lastScrollY = scrollY;
+      });
+    })();
+
+    // Mobile menu toggle
+    (function() {
+      var toggle = document.getElementById('mobileToggle');
+      var links = document.getElementById('navLinks');
+
+      toggle.addEventListener('click', function() {
+        links.classList.toggle('open');
+      });
+
+      // Close menu on link click
+      var navAnchors = links.querySelectorAll('a');
+      navAnchors.forEach(function(anchor) {
+        anchor.addEventListener('click', function() {
+          links.classList.remove('open');
+        });
+      });
+    })();
+
+    // FAQ accordion
+    (function() {
+      var faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(function(item) {
+        var button = item.querySelector('.faq-question');
+        button.addEventListener('click', function() {
+          var isOpen = item.classList.contains('open');
+
+          // Close all items
+          faqItems.forEach(function(otherItem) {
+            otherItem.classList.remove('open');
+            otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          });
+
+          // Open clicked item if it was closed
+          if (!isOpen) {
+            item.classList.add('open');
+            button.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+
+    // Smooth scroll for anchor links
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            var offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
