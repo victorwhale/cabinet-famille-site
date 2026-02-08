@@ -17,26 +17,26 @@
     }
 
     :root {
-      --white-warm: #FDFBF7;
-      --cream: #F5F0E8;
-      --cream-dark: #EDE6D8;
-      --navy: #1A1A2E;
-      --navy-light: #2D2D44;
-      --blue-soft: #4A7BA7;
-      --blue-light: #6B9DC2;
-      --blue-pale: #E8F0F7;
-      --lavender: #7C6FA0;
-      --lavender-light: #9B8FBF;
-      --lavender-pale: #F0ECF5;
-      --text-primary: #2C2C3E;
-      --text-secondary: #5A5A6E;
-      --text-light: #8A8A9A;
+      --white-warm: #FDF9F5;
+      --cream: #F7F0E6;
+      --cream-dark: #EDE3D5;
+      --navy: #2E1F1A;
+      --navy-light: #4A3630;
+      --blue-soft: #B07A5B;
+      --blue-light: #C49478;
+      --blue-pale: #F7EDE6;
+      --lavender: #9E7B6D;
+      --lavender-light: #B89A8E;
+      --lavender-pale: #F5EDE8;
+      --text-primary: #3A2E2A;
+      --text-secondary: #6B5D56;
+      --text-light: #9A8E88;
       --gold-subtle: #C4A96A;
       --gold-light: #F0E6D0;
-      --border-light: rgba(26, 26, 46, 0.08);
-      --shadow-soft: 0 2px 20px rgba(26, 26, 46, 0.06);
-      --shadow-medium: 0 4px 30px rgba(26, 26, 46, 0.1);
-      --shadow-hover: 0 8px 40px rgba(26, 26, 46, 0.14);
+      --border-light: rgba(46, 31, 26, 0.08);
+      --shadow-soft: 0 2px 20px rgba(46, 31, 26, 0.06);
+      --shadow-medium: 0 4px 30px rgba(46, 31, 26, 0.1);
+      --shadow-hover: 0 8px 40px rgba(46, 31, 26, 0.14);
       --radius: 12px;
       --radius-lg: 20px;
       --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -291,7 +291,7 @@
       display: flex;
       align-items: center;
       position: relative;
-      background: linear-gradient(165deg, var(--white-warm) 0%, var(--cream) 50%, var(--blue-pale) 100%);
+      background: linear-gradient(165deg, var(--white-warm) 0%, var(--cream) 50%, #F5E8DE 100%);
       overflow: hidden;
     }
 
@@ -302,7 +302,7 @@
       right: -200px;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(74, 123, 167, 0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(176, 122, 91, 0.06) 0%, transparent 70%);
       border-radius: 50%;
     }
 
@@ -313,7 +313,7 @@
       left: -100px;
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(124, 111, 160, 0.05) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(158, 123, 109, 0.05) 0%, transparent 70%);
       border-radius: 50%;
     }
 
@@ -337,8 +337,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(74, 123, 167, 0.08);
-      border: 1px solid rgba(74, 123, 167, 0.15);
+      background: rgba(176, 122, 91, 0.08);
+      border: 1px solid rgba(176, 122, 91, 0.15);
       padding: 8px 16px;
       border-radius: 50px;
       font-size: 0.78rem;
@@ -557,7 +557,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, rgba(74, 123, 167, 0.1) 0%, transparent 50%, rgba(124, 111, 160, 0.08) 100%);
+      background: linear-gradient(135deg, rgba(176, 122, 91, 0.1) 0%, transparent 50%, rgba(158, 123, 109, 0.08) 100%);
     }
 
     .reassurance-inner {
@@ -640,7 +640,7 @@
     .expertise-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-hover);
-      border-color: rgba(74, 123, 167, 0.1);
+      border-color: rgba(176, 122, 91, 0.1);
     }
 
     .expertise-card:hover::before {
@@ -891,7 +891,7 @@
       right: -100px;
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(74, 123, 167, 0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(176, 122, 91, 0.15) 0%, transparent 70%);
       border-radius: 50%;
     }
 
@@ -902,7 +902,7 @@
       left: -50px;
       width: 300px;
       height: 300px;
-      background: radial-gradient(circle, rgba(124, 111, 160, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(158, 123, 109, 0.1) 0%, transparent 70%);
       border-radius: 50%;
     }
 
@@ -1074,7 +1074,7 @@
     }
 
     .faq-item:hover {
-      border-color: rgba(74, 123, 167, 0.15);
+      border-color: rgba(176, 122, 91, 0.15);
     }
 
     .faq-question {
@@ -1268,7 +1268,7 @@
     .form-group select:focus,
     .form-group textarea:focus {
       border-color: var(--blue-soft);
-      box-shadow: 0 0 0 3px rgba(74, 123, 167, 0.1);
+      box-shadow: 0 0 0 3px rgba(176, 122, 91, 0.1);
     }
 
     .form-group textarea {
@@ -1696,14 +1696,14 @@
       <div class="expertise-grid">
         <div class="expertise-card reveal">
           <div class="expertise-icon blue">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B07A5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
           </div>
           <h3>Divorce</h3>
           <p>Divorce amiable, contentieux ou par consentement mutuel. Nous vous guidons vers la procedure la plus adaptee a votre situation, en privilegiant toujours le dialogue.</p>
         </div>
         <div class="expertise-card reveal reveal-delay-1">
           <div class="expertise-icon lavender">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C6FA0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9E7B6D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h3>Garde d'enfants et droit de visite</h3>
           <p>Protection de l'interet superieur de l'enfant, amenagement de la residence alternee, droit de visite et d'hebergement. L'enfant reste notre priorite absolue.</p>
@@ -1717,14 +1717,14 @@
         </div>
         <div class="expertise-card reveal reveal-delay-1">
           <div class="expertise-icon lavender">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C6FA0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9E7B6D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </div>
           <h3>Adoption et filiation</h3>
           <p>Accompagnement dans les demarches d'adoption nationale et internationale, reconnaissance de filiation, contestation de paternite. Nous construisons des liens familiaux durables.</p>
         </div>
         <div class="expertise-card reveal reveal-delay-2">
           <div class="expertise-icon blue">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B07A5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <h3>Violences conjugales</h3>
           <p>Obtention d'ordonnances de protection en urgence, accompagnement des victimes de violences intra-familiales. Votre securite et celle de vos enfants est notre priorite immediate.</p>
@@ -1754,7 +1754,7 @@
           <div class="approach-features">
             <div class="approach-feature reveal reveal-delay-2">
               <div class="approach-feature-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B07A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               </div>
               <div>
                 <h4>L'ecoute avant tout</h4>
@@ -1763,7 +1763,7 @@
             </div>
             <div class="approach-feature reveal reveal-delay-3">
               <div class="approach-feature-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B07A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
               <div>
                 <h4>La mediation comme premier reflexe</h4>
@@ -1772,7 +1772,7 @@
             </div>
             <div class="approach-feature reveal reveal-delay-4">
               <div class="approach-feature-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B07A5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
               <div>
                 <h4>Une defense feroce quand il le faut</h4>
@@ -2012,7 +2012,7 @@
           <div class="contact-details reveal reveal-delay-3">
             <div class="contact-detail">
               <div class="contact-detail-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B07A5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div>
                 <div class="contact-detail-label">Adresse</div>
@@ -2021,7 +2021,7 @@
             </div>
             <div class="contact-detail">
               <div class="contact-detail-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B07A5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               </div>
               <div>
                 <div class="contact-detail-label">Telephone</div>
@@ -2030,7 +2030,7 @@
             </div>
             <div class="contact-detail">
               <div class="contact-detail-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A7BA7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B07A5B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <div>
                 <div class="contact-detail-label">Email</div>
@@ -2039,7 +2039,7 @@
             </div>
           </div>
           <div class="contact-note reveal reveal-delay-4">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C6FA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9E7B6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             Premier rendez-vous confidentiel et sans engagement
           </div>
         </div>
