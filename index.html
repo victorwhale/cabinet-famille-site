@@ -515,6 +515,33 @@
       margin-top: 2px;
     }
 
+    .hero-image-wrapper {
+      width: 100%;
+      max-width: 520px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-medium);
+      position: relative;
+    }
+
+    .hero-image-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(26, 26, 46, 0.08) 100%);
+      pointer-events: none;
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
     /* ===== REASSURANCE BAR ===== */
     .reassurance {
       background: var(--navy);
@@ -787,6 +814,67 @@
       font-size: 0.78rem;
       opacity: 0.7;
       margin-top: 2px;
+    }
+
+    .approach-image {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .approach-image img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ===== BORDEAUX BANNER ===== */
+    .bordeaux-banner {
+      position: relative;
+      overflow: hidden;
+      height: 280px;
+    }
+
+    .bordeaux-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .bordeaux-banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(26, 26, 46, 0.3) 0%, rgba(26, 26, 46, 0.5) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .bordeaux-banner-text {
+      color: white;
+    }
+
+    .bordeaux-banner-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: white;
+    }
+
+    .bordeaux-banner-text p {
+      font-size: clamp(0.88rem, 1.5vw, 1rem);
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 300;
     }
 
     /* ===== CHIFFRES ===== */
@@ -1429,6 +1517,14 @@
         display: inline-block;
       }
 
+      .approach-image img {
+        height: 220px;
+      }
+
+      .bordeaux-banner {
+        height: 200px;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -1519,7 +1615,10 @@
         </div>
       </div>
       <div class="hero-visual reveal reveal-delay-2">
-        <div class="hero-card">
+        <div class="hero-image-wrapper">
+          <img src="img/hero.jpg" alt="Espace de consultation chaleureux du Cabinet Delacroix a Bordeaux" loading="eager">
+        </div>
+        <div class="hero-card" style="margin-top: 24px;">
           <div class="hero-card-quote">
             Maitre Delacroix a su m'ecouter et me guider avec une grande humanite dans cette periode si difficile de ma vie.
           </div>
@@ -1675,6 +1774,9 @@
           </div>
         </div>
         <div class="approach-visual reveal reveal-delay-2">
+          <div class="approach-image">
+            <img src="img/mediation.jpg" alt="Salle de mediation lumineuse du Cabinet Delacroix" loading="lazy">
+          </div>
           <div class="approach-card-main">
             <div class="approach-quote">
               Chaque famille a sa propre histoire. Notre role n'est pas de juger, mais de vous accompagner vers la meilleure issue possible, avec humanite et rigueur.
@@ -1872,6 +1974,17 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BORDEAUX BANNER ===== -->
+  <section class="bordeaux-banner">
+    <img src="img/bordeaux.jpg" alt="Vue panoramique de Bordeaux, Place de la Bourse au coucher du soleil" loading="lazy">
+    <div class="bordeaux-banner-overlay">
+      <div class="bordeaux-banner-text">
+        <h3>Au coeur de Bordeaux, a vos cotes</h3>
+        <p>24 Cours de l'Intendance - Centre historique de Bordeaux</p>
       </div>
     </div>
   </section>
